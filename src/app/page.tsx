@@ -1,15 +1,25 @@
-import { Bakbak_One } from 'next/font/google';
+import React from 'react';
 import background from '../img/checklist2.jpg';
+import InputField from './input';
 
 export default function Home() {
-    console.log(background);
+    
+    const backgroundStyle = {
+        backgroundImage: `url(${background.src})`,
+        backgroundSize: 'cover',
+        width: '100vw', // Set width to full viewport width
+        height: '100vh', // Set height to full viewport height
+    };
 
-    background.width = 1920;
-    background.height = 1080;
 
     return(
-        <div style={{ backgroundImage: `url(${background.src})` }}>
-            <h1 className="text-center text-4xl h-screen">Hello World</h1>
+        <div style={backgroundStyle}>
+            <div>
+                <h1 className="text-center text-4xl h-screen">Hello World</h1>
+            </div>
+            <div>
+                <InputField />
+            </div>
         </div>
     )
 }
