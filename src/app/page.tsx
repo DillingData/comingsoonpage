@@ -3,7 +3,7 @@ import background from '../img/checklist2.jpg';
 import InputField from './input';
 
 export default function Home() {
-    
+
     const backgroundStyle = {
         backgroundImage: `url(${background.src})`,
         backgroundSize: 'cover',
@@ -14,10 +14,8 @@ export default function Home() {
 
     return(
         <div style={backgroundStyle}>
-            <div>
-                <h1 className="text-center text-4xl h-screen">Hello World</h1>
-            </div>
-            <div>
+            <div className='flex items-center justify-center'>
+                <h1 className="text-4xl text-[#CED3D0]">Hello World</h1>
                 <InputField />
             </div>
         </div>

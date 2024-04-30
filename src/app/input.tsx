@@ -1,7 +1,7 @@
 
 export default function inputField() {
     return (
-        <div>
+        <div className="text-center">
             <p>Test</p>
         </div>
     )
