@@ -1,11 +1,8 @@
 'use client';
 import React, { FormEvent } from "react"
 
-
-
 const inputField = () => {
     async function addEmail(event:FormEvent<HTMLFormElement>) {
-        event.preventDefault();
         const email = (document.getElementById('emailAdress') as HTMLInputElement)?.value;
         alert('Email: ' + email + ' has been added to the que');
         console.log(event);
