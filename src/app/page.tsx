@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '../img/checklist2.jpg';
+import background from '../img/checklist.jpg';
 import InputField from './input';
 
 export default function Home() {
@@ -17,21 +17,27 @@ export default function Home() {
     return(
         <div style={backgroundStyle}>
             <div className='text-center'>
-                <h1 className="text-4xl text-[#1E90FF]">Coming Soon</h1>
-                <p className='w-[32rem] text-[#FFFFFF] text-center'>
-                    Soon we are releasing the all new Checklist App. This will help you keep control of 
-                    repetetive tasks. You will not be able to live without it!
+                <h1 className="text-3xl mb-5 text-[#1E90FF]">Streamline Your Life with CheckFlow</h1>
+                <p className='w-[32rem] mb-5 text-[#121111] text-xl text-center'>
+                    Effortlessly enhance organization and productivity with CheckFlow. 
+                    Whether it's daily tasks or crucial projects, CheckFlow ensures you stay organized wherever you go. Access your checklists anytime.
                 </p>
-                {/*
-                <h1 className="text-4xl text-[#008080]">Coming Soon</h1>
-                <h1 className="text-4xl text-[#2F4F4F]">Coming Soon</h1>
-                <h1 className="text-4xl text-[#FFFFFF]">Coming Soon</h1>
-                <h1 className="text-4xl text-[#333333]">Coming Soon</h1>
-                <h1 className="text-4xl text-[#ADD8E6]">Coming Soon</h1>
-                <h1 className="text-4xl text-[#483C32]">Coming Soon</h1>
+                {/* 
+                <h1 className="text-2xl mb-5 text-[#1E90FF]">Stay Organized, Anywhere</h1>
+                <p className='w-[32rem] mb-5 text-[#121111] text-xl text-center'>
+                    From daily tasks to important projects, CheckFlow keeps you on track no matter where you are. Access your checklists anytime, anywhere, on any device.
+                </p>
                 */}
+                <h1 className="text-2xl mb-5 text-[#1E90FF]">Be the First to Experience CheckFlow</h1>
+                <p className='w-[32rem] mb-5 text-[#121111] text-xl text-center'>
+                    Join our waitlist today and be among the first to experience the simplicity and effectiveness of CheckFlow. Sign up with your email address below now!
+                </p>
                 <InputField />
             </div>
         </div>
     )
 }
+
+
+
+//Enroll in our waitlist today for an early experience of CheckFlow's simplicity and efficiency. Sign up with your email address now!
