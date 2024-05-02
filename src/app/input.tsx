@@ -4,7 +4,17 @@ import React, { FormEvent } from "react"
 const inputField = () => {
     async function addEmail(event:FormEvent<HTMLFormElement>) {
         const email = (document.getElementById('emailAdress') as HTMLInputElement)?.value;
-        alert('Email: ' + email + ' has been added to the que');
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()
+        var yyyy = today.getFullYear();
+
+        mm++;
+
+        let todayDate = dd + '/' + mm + '/' + yyyy;
+
+        alert('Email: ' + email + ' has been added to the que on date: ' + todayDate);
         console.log(event);
     }
 
