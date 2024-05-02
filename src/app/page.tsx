@@ -37,7 +37,3 @@ export default function Home() {
         </div>
     )
 }
-
-
-
-//Enroll in our waitlist today for an early experience of CheckFlow's simplicity and efficiency. Sign up with your email address now!
