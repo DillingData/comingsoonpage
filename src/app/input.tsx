@@ -36,8 +36,6 @@ const inputField = () => {
             </form>
         </div>
 
-
-
         /*
         <div className="text-center text-[#1E90FF]">
             <form onSubmit={addEmail}>
