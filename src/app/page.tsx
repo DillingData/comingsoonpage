@@ -15,21 +15,15 @@ export default function Home() {
     };
 
     return(
-        <div style={backgroundStyle}>
-            <div className='text-center'>
-                <h1 className="text-3xl mb-5 text-[#1E90FF]">Streamline Your Life with CheckFlow</h1>
-                <p className='w-[32rem] mb-5 text-[#121111] text-xl text-center'>
+        <div style={backgroundStyle} className="px-4">
+            <div className="text-center mx-auto max-w-screen-lg">
+                <h1 className="text-2xl md:text-3xl mb-5 text-[#1E90FF]">Streamline Your Life with CheckFlow</h1>
+                <p className="w-full md:w-[32rem] mb-5 text-[#121111] text-lg md:text-xl text-center mx-auto">
                     Effortlessly enhance organization and productivity with CheckFlow. 
                     Whether it's daily tasks or crucial projects, CheckFlow ensures you stay organized wherever you go. Access your checklists anytime.
                 </p>
-                {/* 
-                <h1 className="text-2xl mb-5 text-[#1E90FF]">Stay Organized, Anywhere</h1>
-                <p className='w-[32rem] mb-5 text-[#121111] text-xl text-center'>
-                    From daily tasks to important projects, CheckFlow keeps you on track no matter where you are. Access your checklists anytime, anywhere, on any device.
-                </p>
-                */}
-                <h1 className="text-2xl mb-5 text-[#1E90FF]">Be the First to Experience CheckFlow</h1>
-                <p className='w-[32rem] mb-5 text-[#121111] text-xl text-center'>
+                <h1 className="text-xl md:text-2xl mb-5 text-[#1E90FF]">Be the First to Experience CheckFlow</h1>
+                <p className="w-full md:w-[32rem] mb-5 text-[#121111] text-lg md:text-xl text-center mx-auto">
                     Join our waitlist today and be among the first to experience the simplicity and effectiveness of CheckFlow. Sign up with your email address below now!
                 </p>
                 <InputField />
