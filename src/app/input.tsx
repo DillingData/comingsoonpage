@@ -3,7 +3,10 @@ import React, { FormEvent } from "react"
 
 const inputField = () => {
     async function addEmail(event:FormEvent<HTMLFormElement>) {
-        const email = (document.getElementById('emailAdress') as HTMLInputElement)?.value;
+        event.preventDefault();
+        const email = (document.getElementById('emailAddress') as HTMLInputElement)?.value;
+
+        console.log(email);
 
         var today = new Date();
         var dd = today.getDate();
@@ -13,6 +16,24 @@ const inputField = () => {
         mm++;
 
         let todayDate = dd + '/' + mm + '/' + yyyy;
+
+        const response = await fetch('/api/email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, todayDate }),
+          });
+      
+          if (response.ok) {
+            /*
+            fetchSignUps();  // Refresh the list of sign-ups
+            setEmailAddress('');  // Clear the input field
+            setTimeStamp('');  // Clear the timestamp field
+            */
+          } else {
+            console.error('Failed to submit:', response.statusText);
+          }
 
         alert('Email: ' + email + ' has been added to the que on date: ' + todayDate);
         console.log(event);
