@@ -3,19 +3,22 @@ import React, { FormEvent } from "react"
 
 const inputField = () => {
     async function addEmail(event:FormEvent<HTMLFormElement>) {
-        event.preventDefault();
+        //event.preventDefault();
         const emailAddress = (document.getElementById('emailAddress') as HTMLInputElement)?.value;
 
         console.log(emailAddress);
 
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth()
-        var yyyy = today.getFullYear();
+        let today = new Date();
+        let hh = today.getHours();
+        let min = today.getMinutes();
+        let sec = today.getSeconds();
+        let dd = today.getDate();
+        let mm = today.getMonth()
+        let yyyy = today.getFullYear();
 
         mm++;
 
-        let timeStamp = dd + '/' + mm + '/' + yyyy;
+        let timeStamp = dd + '/' + mm + '/' + yyyy + '-' + hh + ':' + min + ':' + sec;
 
         const response = await fetch('/api/email', {
             method: 'POST',
