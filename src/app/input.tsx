@@ -4,9 +4,9 @@ import React, { FormEvent } from "react"
 const inputField = () => {
     async function addEmail(event:FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        const email = (document.getElementById('emailAddress') as HTMLInputElement)?.value;
+        const emailAddress = (document.getElementById('emailAddress') as HTMLInputElement)?.value;
 
-        console.log(email);
+        console.log(emailAddress);
 
         var today = new Date();
         var dd = today.getDate();
@@ -15,14 +15,15 @@ const inputField = () => {
 
         mm++;
 
-        let todayDate = dd + '/' + mm + '/' + yyyy;
+        let timeStamp = dd + '/' + mm + '/' + yyyy;
 
         const response = await fetch('/api/email', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email, todayDate }),
+
+            body: JSON.stringify({ emailAddress, timeStamp }),
           });
       
           if (response.ok) {
@@ -35,7 +36,7 @@ const inputField = () => {
             console.error('Failed to submit:', response.statusText);
           }
 
-        alert('Email: ' + email + ' has been added to the que on date: ' + todayDate);
+        alert('Email: ' + emailAddress + ' has been added to the que on date: ' + timeStamp);
         console.log(event);
     }
 
