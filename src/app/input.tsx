@@ -1,4 +1,5 @@
 'use client';
+import { time } from "console";
 import React, { FormEvent } from "react"
 
 const inputField = () => {
@@ -25,16 +26,12 @@ const inputField = () => {
             headers: {
               'Content-Type': 'application/json',
             },
-
+            
             body: JSON.stringify({ emailAddress, timeStamp }),
           });
       
           if (response.ok) {
-            /*
-            fetchSignUps();  // Refresh the list of sign-ups
-            setEmailAddress('');  // Clear the input field
-            setTimeStamp('');  // Clear the timestamp field
-            */
+            console.log('email added to the database: ' + emailAddress + ' at time: ' + timeStamp)
           } else {
             console.error('Failed to submit:', response.statusText);
           }
