@@ -6,6 +6,7 @@ import { z } from 'zod';
 import type { User } from '@/app/lib/definitions';
 import bcrypt from 'bcrypt';
  
+//Gets username from the database based on email address.
 async function getUser(email: string): Promise<User | undefined> {
   try {
     //Need to change below to work with Prisma
@@ -17,6 +18,7 @@ async function getUser(email: string): Promise<User | undefined> {
   }
 }
  
+//Checks if the user tried to sign in with the correct password
 export const { auth, signIn, signOut } = NextAuth({
   ...authConfig,
   providers: [
